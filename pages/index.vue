@@ -1,263 +1,455 @@
 <template>
-  <div>
-    <!-- 英雄區域 -->
-    <section
-      class="to-primary relative bg-gradient-to-br from-gray-900 py-24 text-white"
-    >
-      <div class="bg-pattern absolute inset-0 opacity-20"></div>
-      <div class="container relative z-10 mx-auto px-4">
-        <div class="max-w-2xl">
-          <h1 class="mb-6 text-4xl font-bold leading-tight md:text-5xl">
-            創新科技，智慧生活
+  <div class="min-h-screen bg-white">
+    <!-- Hero Section -->
+    <section class="container mx-auto py-20 px-4">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2">
+          <div
+            class="inline-block mb-2 bg-white rounded-full px-3 py-1 text-sm border"
+          >
+            Hello
+          </div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            I'm <span class="text-orange-500">Jenny</span>,<br />
+            Product Designer
           </h1>
-          <p class="mb-8 text-xl leading-relaxed">
-            探索我們最新的產品系列，體驗前所未有的智慧生活方式。
+          <p class="text-gray-600 mb-8">
+            Joyously exceptional product design solving complex problems.
           </p>
-          <div class="flex flex-wrap gap-4">
+          <div class="flex gap-4">
+            <button
+              class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium"
+            >
+              Portfolio
+            </button>
+
             <Button
-              label="了解更多"
-              class="p-button-lg shadow-lg transition-all hover:shadow-xl"
+              icon="pi pi-search"
+              severity="success"
+              aria-label="Search"
             />
-            <Button
-              label="聯絡我們"
-              class="p-button-outlined p-button-lg border-2 transition-all hover:bg-white hover:text-gray-900"
-              severity="secondary"
+
+            <button
+              class="border border-gray-300 hover:border-gray-400 px-6 py-3 rounded-full font-medium"
+            >
+              Hire Me
+            </button>
+          </div>
+        </div>
+        <div class="md:w-1/2 relative mt-10 md:mt-0">
+          <div class="relative z-10">
+            <div
+              class="bg-orange-500 rounded-full w-64 h-64 md:w-80 md:h-80 overflow-hidden mx-auto"
+            >
+              <img
+                src="https://picsum.photos/300/200/?random=10"
+                alt="Jenny"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="absolute top-0 right-8 bg-white p-4 rounded-lg shadow-md">
+            <div class="text-center">
+              <h3 class="text-3xl font-bold text-orange-500">10 Years</h3>
+              <p class="text-sm text-gray-500">Experience</p>
+            </div>
+          </div>
+          <div
+            class="absolute bottom-4 left-8 bg-white p-4 rounded-lg shadow-md"
+          >
+            <div class="text-center">
+              <h3 class="text-3xl font-bold">450+</h3>
+              <p class="text-sm text-gray-500">Client Served</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="container mx-auto py-16 px-4">
+      <h2 class="text-2xl font-bold mb-8">My Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">UI/UX Design</h3>
+          <div class="relative h-40 overflow-hidden rounded-lg">
+            <img
+              src="https://picsum.photos/300/200/?random=11"
+              alt="UI/UX Design"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-4 right-4 bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              <span class="icon">→</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Web Design</h3>
+          <div class="relative h-40 overflow-hidden rounded-lg">
+            <img
+              src="https://picsum.photos/300/200/?random=12"
+              alt="Web Design"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-4 right-4 bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              <span class="icon">→</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-6 rounded-lg">
+          <h3 class="text-xl font-semibold mb-4">Landing Page</h3>
+          <div class="relative h-40 overflow-hidden rounded-lg">
+            <img
+              src="https://picsum.photos/300/200/?random=13"
+              alt="Landing Page"
+              class="w-full h-full object-cover"
+            />
+            <div
+              class="absolute bottom-4 right-4 bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              <span class="icon">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="container mx-auto py-16 px-4">
+      <h2 class="text-2xl font-bold mb-8">My Work Experience</h2>
+      <div class="space-y-6">
+        <div class="flex">
+          <div class="mr-4 relative">
+            <div class="w-4 h-4 bg-orange-500 rounded-full"></div>
+            <div
+              class="absolute top-4 left-2 -ml-px h-full w-0.5 bg-gray-300"
+            ></div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Self-Employed, NYC</h3>
+            <p class="text-gray-500 text-sm mb-2">June 2021 - July 2023</p>
+            <p class="text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="mr-4 relative">
+            <div class="w-4 h-4 bg-orange-500 rounded-full"></div>
+            <div
+              class="absolute top-4 left-2 -ml-px h-full w-0.5 bg-gray-300"
+            ></div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Visual Designer</h3>
+            <p class="text-gray-500 text-sm mb-2">Insighthancer</p>
+            <p class="text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex">
+          <div class="mr-4">
+            <div class="w-4 h-4 bg-orange-500 rounded-full"></div>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">UI/UX Designer</h3>
+            <p class="text-gray-500 text-sm mb-2">KG Design Studio</p>
+            <p class="text-gray-600">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Hire Me Section -->
+    <section class="container mx-auto py-16 px-4 bg-gray-50 rounded-lg">
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-8 md:mb-0">
+          <h2 class="text-2xl font-bold mb-4">
+            Why You <span class="text-orange-500">Hire Me</span> for Your Next
+            Projects?
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor.
+          </p>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <p class="text-2xl font-bold">600+</p>
+              <p class="text-gray-500">Projects Completed</p>
+            </div>
+            <div>
+              <p class="text-2xl font-bold">80+</p>
+              <p class="text-gray-500">Happy Clients</p>
+            </div>
+          </div>
+          <button
+            class="mt-6 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium"
+          >
+            Hire Me
+          </button>
+        </div>
+        <div class="md:w-1/2">
+          <div
+            class="bg-orange-500 rounded-full w-64 h-64 overflow-hidden mx-auto"
+          >
+            <img
+              src="https://picsum.photos/300/200/?random=14"
+              alt="Jenny"
+              class="w-full h-full object-cover"
             />
           </div>
         </div>
       </div>
-      <div class="absolute bottom-0 left-0 right-0">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 120"
-          class="fill-current text-white"
-        >
-          <path
-            d="M0,32L80,53.3C160,75,320,117,480,117.3C640,117,800,75,960,64C1120,53,1280,75,1360,85.3L1440,96L1440,120L0,120Z"
-          ></path>
-        </svg>
-      </div>
     </section>
 
-    <!-- 產品輪播圖 -->
-    <section class="bg-white py-20">
-      <div class="container mx-auto px-4">
-        <h2 class="mb-4 text-center text-3xl font-bold">精選產品</h2>
-        <p class="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-          發現我們專為現代生活設計的高品質智能產品
-        </p>
-        <Swiper
-          :modules="[SwiperAutoplay, SwiperPagination, SwiperNavigation]"
-          :slides-per-view="1"
-          :space-between="30"
-          :breakpoints="{
-            '640': {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            '1024': {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-          }"
-          :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }"
-          :pagination="{
-            clickable: true,
-          }"
-          :navigation="true"
-          class="product-swiper"
-        >
-          <SwiperSlide v-for="(product, index) in products" :key="index">
-            <Card class="h-full shadow-sm transition-shadow hover:shadow-lg">
-              <template #header>
-                <div class="relative overflow-hidden">
-                  <img
-                    :src="product.image"
-                    :alt="product.name"
-                    class="h-60 w-full transform object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                  <span
-                    class="bg-primary absolute right-2 top-2 rounded px-2 py-1 text-sm font-medium text-white"
-                  >
-                    熱門
-                  </span>
-                </div>
-              </template>
-              <template #title>
-                <div class="flex items-center justify-between">
-                  <span>{{ product.name }}</span>
-                  <Rating :modelValue="4" readonly :cancel="false" />
-                </div>
-              </template>
-              <template #content>
-                <p class="text-gray-600">{{ product.description }}</p>
-                <div class="mt-4 flex items-center justify-between">
-                  <span class="text-primary text-xl font-bold"
-                    >¥{{ product.price }}</span
-                  >
-                  <span class="text-sm text-gray-500 line-through"
-                    >¥{{ Math.round(product.price * 1.2) }}</span
-                  >
-                </div>
-              </template>
-              <template #footer>
-                <div class="flex items-center justify-between">
-                  <Button
-                    icon="pi pi-heart"
-                    text
-                    severity="secondary"
-                    class="p-button-rounded"
-                  />
-                  <Button icon="pi pi-shopping-cart" label="加入購物車" />
-                </div>
-              </template>
-            </Card>
-          </SwiperSlide>
-        </Swiper>
-        <div class="mt-10 text-center">
-          <Button label="查看所有產品" outlined class="px-6" />
+    <!-- Portfolio Section -->
+    <section class="container mx-auto py-16 px-4">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold">
+          Let's Have a Look at my <span class="text-orange-500">Portfolio</span>
+        </h2>
+        <button class="text-orange-500 font-medium flex items-center">
+          See More <span class="ml-1">→</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <div class="h-48 bg-white rounded-lg mb-4"></div>
+          <p class="text-gray-500">UI/UX Design</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <div class="h-48 bg-white rounded-lg mb-4"></div>
+          <p class="text-gray-500">Landing Page</p>
+        </div>
+        <div class="bg-gray-100 p-4 rounded-lg">
+          <div class="h-48 bg-white rounded-lg mb-4"></div>
+          <p class="text-gray-500">Website</p>
         </div>
       </div>
-    </section>
 
-    <!-- 特色區域 -->
-    <section class="bg-gray-50 py-20">
-      <div class="container mx-auto px-4">
-        <h2 class="mb-4 text-center text-3xl font-bold">我們的特色</h2>
-        <p class="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-          堅持不懈地為客戶提供最佳的產品和服務體驗
-        </p>
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
-          <div
-            class="border-primary rounded-lg border-t-4 bg-white p-8 text-center shadow-md transition-shadow hover:shadow-lg"
-          >
-            <div
-              class="bg-primary/10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full"
-            >
-              <i class="pi pi-check-circle text-primary text-3xl"></i>
-            </div>
-            <h3 class="mb-4 text-xl font-semibold">高品質保證</h3>
-            <p class="text-gray-600">
-              我們所有產品均經過嚴格的品質檢測，確保每一件產品都達到最高標準。
-            </p>
+      <!-- Case Study -->
+      <div class="mt-10 bg-gray-100 p-6 rounded-lg">
+        <div class="flex flex-col md:flex-row gap-6">
+          <div class="md:w-1/3">
+            <img
+              src="https://picsum.photos/300/200/?random=15"
+              alt="Food Express"
+              class="w-full h-48 object-cover rounded-lg"
+            />
           </div>
-          <div
-            class="border-primary rounded-lg border-t-4 bg-white p-8 text-center shadow-md transition-shadow hover:shadow-lg"
-          >
+          <div class="md:w-2/3">
             <div
-              class="bg-primary/10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full"
-            >
-              <i class="pi pi-truck text-primary text-3xl"></i>
-            </div>
-            <h3 class="mb-4 text-xl font-semibold">快速配送</h3>
+              class="inline-block mb-2 bg-orange-500 rounded-full w-2 h-2"
+            ></div>
+            <h3 class="text-xl font-bold mb-2">
+              Food Express - Food Delivery Solution
+            </h3>
             <p class="text-gray-600">
-              全國範圍內48小時送達，讓您第一時間體驗我們的產品。
-            </p>
-          </div>
-          <div
-            class="border-primary rounded-lg border-t-4 bg-white p-8 text-center shadow-md transition-shadow hover:shadow-lg"
-          >
-            <div
-              class="bg-primary/10 mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full"
-            >
-              <i class="pi pi-heart text-primary text-3xl"></i>
-            </div>
-            <h3 class="mb-4 text-xl font-semibold">貼心服務</h3>
-            <p class="text-gray-600">
-              7×24小時客戶服務，隨時解答您的疑問，提供專業的產品諮詢。
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris.
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 訂閱區域 -->
-    <section class="bg-primary relative overflow-hidden py-20 text-white">
-      <div class="absolute inset-0 opacity-10">
-        <div
-          class="absolute inset-0 rotate-45 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC40Ij48cGF0aCBkPSJNMzYgMzRoLTJ2LTRoMnY0em0tNCAwaDJ2LTJoLTJ2MnoiLz48cGF0aCBkPSJNMzAgMzRoLTJ2LTRoMnY0em0tNCAwaDJ2LTJoLTJ2MnoiLz48cGF0aCBkPSJNMjQgMzRoLTJ2LTRoMnY0em0tNCAwaDJ2LTJoLTJ2MnoiLz48cGF0aCBkPSJNMTggMzRoLTJ2LTRoMnY0em0tNCAwaDJ2LTJoLTJ2MnoiLz48cGF0aCBkPSJNMTIgMzRoLTJ2LTRoMnY0em0tNCAwaDJ2LTJoLTJ2MnoiLz48cGF0aCBkPSJNNiAzNEg0di00aDJ2NHptLTQgMGgydi0yaC0ydjJ6Ii8+PHBhdGggZD0iTTAgMzRoMnYtMkgwdjJ6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-40"
-        ></div>
-      </div>
-      <div class="container relative z-10 mx-auto px-4 text-center">
-        <h2 class="mb-6 text-3xl font-bold">訂閱我們的新聞</h2>
-        <p class="mx-auto mb-8 max-w-2xl">
-          及時了解我們的最新產品和促銷活動，不錯過任何優惠。
-        </p>
-        <div
-          class="mx-auto flex max-w-md flex-col justify-center gap-4 overflow-hidden rounded-lg bg-white/10 p-1 shadow-lg backdrop-blur-sm sm:flex-row"
-        >
-          <InputText placeholder="輸入您的郵箱" class="flex-grow border-0" />
-          <Button label="訂閱" severity="secondary" class="px-6" />
+    <!-- Testimonials Section -->
+    <section class="bg-gray-900 text-white py-16 px-4">
+      <div class="container mx-auto">
+        <h2 class="text-2xl font-bold mb-8">
+          Testimonials that
+          <span class="text-orange-500">Speak to My Results</span>
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <div class="flex mb-4">
+              <div class="text-orange-500 text-2xl mr-1">★★★★★</div>
+            </div>
+            <p class="mb-6">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis.
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gray-500 rounded-full mr-3"></div>
+              <div>
+                <p class="font-semibold">Sarah Brown</p>
+                <p class="text-sm text-gray-400">Marketing Director</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-gray-800 p-6 rounded-lg">
+            <div class="flex mb-4">
+              <div class="text-orange-500 text-2xl mr-1">★★★★★</div>
+            </div>
+            <p class="mb-6">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae ab illo inventore veritatis.
+            </p>
+            <div class="flex items-center">
+              <div class="w-12 h-12 bg-gray-500 rounded-full mr-3"></div>
+              <div>
+                <p class="font-semibold">Andrew Miller</p>
+                <p class="text-sm text-gray-400">CEO, Tech Startup</p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="mt-6 text-sm text-white/70">
-          我們不會向您發送垃圾郵件，您可以隨時取消訂閱。
+
+        <div class="flex justify-center mt-8">
+          <div class="flex space-x-2">
+            <div class="w-3 h-3 bg-orange-500 rounded-full"></div>
+            <div class="w-3 h-3 bg-gray-600 rounded-full"></div>
+            <div class="w-3 h-3 bg-gray-600 rounded-full"></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 客戶評價 -->
-    <section class="bg-white py-20">
-      <div class="container mx-auto px-4">
-        <h2 class="mb-4 text-center text-3xl font-bold">用戶評價</h2>
-        <p class="mx-auto mb-12 max-w-2xl text-center text-gray-600">
-          聽聽我們的客戶怎麼說
-        </p>
+    <!-- Contact Section -->
+    <section class="container mx-auto py-16 px-4">
+      <h2 class="text-2xl font-bold mb-8">
+        Have An Awesome Project Idea?
+        <span class="text-orange-500">Let's Discuss</span>
+      </h2>
 
-        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <div class="relative rounded-lg bg-gray-50 p-6 shadow-md">
-            <div class="text-primary absolute left-4 top-4 text-5xl opacity-20">
-              <i class="pi pi-quote-left"></i>
-            </div>
-            <div class="relative z-10">
-              <p class="mb-4 italic text-gray-600">
-                「這款智能手錶超出了我的預期，續航能力非常強，健康監測功能也很全面。」
-              </p>
-              <div class="flex items-center">
-                <div class="mr-4 h-12 w-12 rounded-full bg-gray-300"></div>
-                <div>
-                  <p class="font-semibold">陳小明</p>
-                  <Rating :modelValue="5" readonly :cancel="false" />
-                </div>
-              </div>
+      <div class="bg-white shadow-lg rounded-lg p-6 max-w-3xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <div>
+            <label class="block text-sm text-gray-600 mb-2"
+              >Your Email Address</label
+            >
+            <input
+              type="email"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+          </div>
+          <div>
+            <label class="block text-sm text-gray-600 mb-2">Phone Number</label>
+            <input
+              type="tel"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            />
+          </div>
+        </div>
+        <div class="mb-6">
+          <label class="block text-sm text-gray-600 mb-2"
+            >Project Details</label
+          >
+          <textarea
+            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+            rows="4"
+          ></textarea>
+        </div>
+        <button
+          class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-lg font-medium"
+        >
+          Submit
+        </button>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="container mx-auto py-8 px-4">
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-gray-100 rounded-full px-4 py-2 text-sm">Design</span>
+        <span class="bg-gray-100 rounded-full px-4 py-2 text-sm"
+          >App Design</span
+        >
+        <span class="bg-gray-100 rounded-full px-4 py-2 text-sm"
+          >Dashboard</span
+        >
+        <span class="bg-gray-100 rounded-full px-4 py-2 text-sm"
+          >Wireframe</span
+        >
+        <span class="bg-gray-100 rounded-full px-4 py-2 text-sm"
+          >User Research</span
+        >
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="container mx-auto py-16 px-4">
+      <div class="flex justify-between items-center mb-8">
+        <h2 class="text-2xl font-bold">
+          From my <span class="text-orange-500">blog post</span>
+        </h2>
+        <button class="text-orange-500 font-medium flex items-center">
+          View All <span class="ml-1">→</span>
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gray-100 rounded-lg overflow-hidden">
+          <div class="h-40 bg-gray-300 relative">
+            <div
+              class="absolute bottom-4 right-4 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              <span class="icon">→</span>
             </div>
           </div>
-
-          <div class="relative rounded-lg bg-gray-50 p-6 shadow-md">
-            <div class="text-primary absolute left-4 top-4 text-5xl opacity-20">
-              <i class="pi pi-quote-left"></i>
-            </div>
-            <div class="relative z-10">
-              <p class="mb-4 italic text-gray-600">
-                「無線耳機的音質令人驚嘆，降噪效果也很好，非常適合在辦公室使用。」
-              </p>
-              <div class="flex items-center">
-                <div class="mr-4 h-12 w-12 rounded-full bg-gray-300"></div>
-                <div>
-                  <p class="font-semibold">林美玲</p>
-                  <Rating :modelValue="4" readonly :cancel="false" />
-                </div>
-              </div>
+          <div class="p-4">
+            <h3 class="font-bold mb-2">
+              Design Unleashed: Behind the Scenes of UI/UX Magic
+            </h3>
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <span class="mr-2">⭐ 4 rating</span>
+              <span>• 22 July 2023</span>
             </div>
           </div>
+        </div>
 
-          <div class="relative rounded-lg bg-gray-50 p-6 shadow-md">
-            <div class="text-primary absolute left-4 top-4 text-5xl opacity-20">
-              <i class="pi pi-quote-left"></i>
+        <div class="bg-gray-100 rounded-lg overflow-hidden">
+          <div class="h-40 bg-gray-300 relative">
+            <div
+              class="absolute bottom-4 right-4 bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              <span class="icon">→</span>
             </div>
-            <div class="relative z-10">
-              <p class="mb-4 italic text-gray-600">
-                「智能家居套裝大大提高了我的生活品質，語音控制非常方便，設置也很簡單。」
-              </p>
-              <div class="flex items-center">
-                <div class="mr-4 h-12 w-12 rounded-full bg-gray-300"></div>
-                <div>
-                  <p class="font-semibold">王大偉</p>
-                  <Rating :modelValue="5" readonly :cancel="false" />
-                </div>
-              </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold mb-2">
+              Beyond Aesthetic: Crafting intuitive UX
+            </h3>
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <span class="mr-2">⭐ 4.5 rating</span>
+              <span>• 15 July 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-100 rounded-lg overflow-hidden">
+          <div class="h-40 bg-gray-300 relative">
+            <div
+              class="absolute bottom-4 right-4 bg-black text-white rounded-full w-8 h-8 flex items-center justify-center"
+            >
+              <span class="icon">→</span>
+            </div>
+          </div>
+          <div class="p-4">
+            <h3 class="font-bold mb-2">
+              Pixels & Insights: Unveiling the Art of UX/UI
+            </h3>
+            <div class="flex items-center text-sm text-gray-500 mb-2">
+              <span class="mr-2">⭐ 5 rating</span>
+              <span>• 8 July 2023</span>
             </div>
           </div>
         </div>
@@ -266,66 +458,53 @@
   </div>
 </template>
 
-<script setup>
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+<script lang="ts" setup>
+import { onMounted } from 'vue';
+import { gsap } from 'gsap';
+import Lenis from '@studio-freight/lenis';
 
-// 引用Swiper模組
-const SwiperAutoplay = Autoplay;
-const SwiperPagination = Pagination;
-const SwiperNavigation = Navigation;
+onMounted(() => {
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    smooth: true,
+  });
 
-// 設置頁面標題
-useHead({
-  title: "ONOFF - 智慧生活解決方案",
-  meta: [
-    {
-      name: "description",
-      content:
-        "探索ONOFF提供的高品質智能科技產品，為您帶來智慧便捷的生活體驗。",
-    },
-  ],
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  // GSAP animations
+  gsap.from('.hero-content', {
+    y: 50,
+    opacity: 0,
+    duration: 1,
+    ease: 'power3.out',
+  });
+
+  const sections = document.querySelectorAll('section');
+  sections.forEach((section, index) => {
+    if (index === 0) return;
+
+    gsap.from(section, {
+      opacity: 0,
+      y: 30,
+      duration: 0.8,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: section,
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+      },
+    });
+  });
 });
-
-// 示例產品數據
-const products = [
-  {
-    name: "智能手錶 Pro",
-    description: "全天候健康監測，長達7天續航，多種運動模式支持。",
-    price: 1299,
-    image: "https://via.placeholder.com/500x300?text=Smart+Watch",
-  },
-  {
-    name: "無線耳機 Max",
-    description: "主動降噪，環境聲模式，高保真音質，長續航。",
-    price: 899,
-    image: "https://via.placeholder.com/500x300?text=Wireless+Earphones",
-  },
-  {
-    name: "智能家居套裝",
-    description: "一鍵控制家中所有智能設備，語音助手支持。",
-    price: 2499,
-    image: "https://via.placeholder.com/500x300?text=Smart+Home+Kit",
-  },
-  {
-    name: "便攜式藍牙音箱",
-    description: "360°環繞立體聲，防水設計，長達12小時播放時間。",
-    price: 599,
-    image: "https://via.placeholder.com/500x300?text=Bluetooth+Speaker",
-  },
-];
 </script>
 
-<style scoped>
-.bg-pattern {
-  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34h-2v-4h2v4zm0-6h-2v-4h2v4zm6 0h-2v-4h2v4zm-12-6h-2v-4h2v4zm6 0h-2v-4h2v4zm-6-6h-2v-4h2v4zm-6 6h-2v-4h2v4zm-6 6h-2v-4h2v4zm36-18h-2v-4h2v4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-}
-
-.product-swiper :deep(.swiper-pagination-bullet-active) {
-  background-color: var(--primary-color);
-}
-
-.product-swiper :deep(.swiper-button-next),
-.product-swiper :deep(.swiper-button-prev) {
-  color: var(--primary-color);
-}
+<style lang="scss" scoped>
+/* Additional custom styles can be added here */
 </style>

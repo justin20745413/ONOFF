@@ -1,0 +1,7 @@
+{
+  "editor.formatOnSave": true,
+  "eslint.validate": ["javascript", "vue", "typescript", "html"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.requireConfig": true,
+  "editor.tabSize": 2
+}

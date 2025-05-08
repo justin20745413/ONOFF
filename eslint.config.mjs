@@ -1,12 +1,13 @@
 // @ts-check
-import withNuxt from "./.nuxt/eslint.config.mjs";
-import prettier from "eslint-config-prettier";
+import withNuxt from './.nuxt/eslint.config.mjs';
 
-const config = await withNuxt();
+const eslintConfig = withNuxt({});
 
-config.push({
-  name: "prettier",
-  ...prettier,
-});
-
-export default config;
+export default {
+    ...eslintConfig,
+    extends: [
+        'plugin:vue/vue3-recommended',
+        'eslint:recommended',
+        'plugin:prettier/recommended',
+    ],
+};
